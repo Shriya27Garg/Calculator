@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<script type="text/javascript">
+		function dis(val) {
+		    document.getElementById("result").value += val;
+		}
+
+		function solve() {
+		    let x = document.getElementById("result").value;
+		    let y = eval(x);
+		    document.getElementById("result").value = y;
+		}
+
+		function clr() {
+		    document.getElementById("result").value = "";
+		}
+
+	</script>
+	<style type="text/css">
+		body{
+			background-color: #535454;
+		}
+		h1{
+			font-size: 350%;
+			margin-left: 40%;
+			color: white;
+			text-decoration: underline;
+		}
+		table { 
+			border: 3px solid black;
+			margin: 5% auto 10% auto; 
+		    margin-left: auto; 
+		    margin-right: auto; 
+		    border-radius: 5px;
+		} 
+		input[type="button"]{
+			height: 10vh;
+			width: 10vw;
+			font-size: 20px;
+			border-radius: 20px;
+		}
+		input[type="button"]:hover{
+			background-color: #a8a8a8;
+		}
+		input[type="text"]{
+			padding: 20px 80px;
+			font-size: 30px;
+		    border-radius: 20px;
+		}
+
+
+		@media (max-width: 768px) {
+		    h1 {
+		        font-size: 250%;
+		        margin-left: 30%;
+		    }
+
+		    input[type="button"] {
+		        height: 8vh;
+		        width: 15vw;
+		        font-size: 18px;
+		    }
+
+		    input[type="text"] {
+		        padding: 15px 60px;
+		        font-size: 25px;
+		    }
+
+		    table {
+		        width: 80%;
+		    }
+		}
+
+		@media (max-width: 600px) {
+		    h1 {
+		        font-size: 200%;
+		        margin-left: 20%;
+		    }
+
+		    input[type="button"] {
+		        height: 8vh;
+		        width: 18vw;
+		        font-size: 18px;
+		    }
+
+		    input[type="text"] {
+		        padding: 10px 80px;
+		        font-size: 20px;
+		    }
+
+		    table {
+		        margin: 10% auto;
+		        width: 90%;
+		    }
+		}
+		/* Media Query for mobile devices in landscape mode */
+		@media (max-width: 480px) {
+		    h1 {
+		        font-size: 200%;
+		        margin-left: 25%;
+		    }
+
+		    input[type="button"] {
+		        height: 7vh;
+		        width: 18vw;
+		        font-size: 16px;
+		    }
+
+		    input[type="text"] {
+		        padding: 12px 50px;
+		        font-size: 22px;
+		    }
+
+		    table {
+		        width: 90%;
+		    }
+		}
+
+		/* Media Query for mobile devices in portrait mode */
+		@media (max-width: 320px) {
+		    h1 {
+		        font-size: 150%;
+		        margin-left: 20%;
+		    }
+
+		    input[type="button"] {
+		        height: 6vh;
+		        width: 20vw;
+		        font-size: 14px;
+		    }
+
+		    input[type="text"] {
+		        padding: 10px 40px;
+		        font-size: 20px;
+		    }
+
+		    table {
+		        width: 95%;
+		    }
+		}
+	</style>
+</head>
+<body>
+	<h1>Calculator</h1>
+	<table> 
+		<tr> 
+			<td colspan="3"><input type="text" id="result"></td> 
+	        <td><input type="button" value="C" onclick="clr()"></td> 
+	    </tr> 
+	  
+	    <tr> 
+	        <td><input type="button" value="1" onclick="dis('1')"></td> 
+	        <td><input type="button" value="2" onclick="dis('2')"></td> 
+	        <td><input type="button" value="3" onclick="dis('3')"></td> 
+	        <td><input type="button" value="/" onclick="dis('/')"></td> 
+        </tr> 
+        <tr> 
+	        <td><input type="button" value="4" onclick="dis('4')"></td> 
+	        <td><input type="button" value="5" onclick="dis('5')"></td> 
+	        <td><input type="button" value="6" onclick="dis('6')"></td> 
+	        <td><input type="button" value="*" onclick="dis('*')"></td> 
+	    </tr> 
+	    <tr> 
+	        <td><input type="button" value="7" onclick="dis('7')"></td> 
+	        <td><input type="button" value="8" onclick="dis('8')"></td> 
+	        <td><input type="button" value="9" onclick="dis('9')"></td> 
+	        <td><input type="button" value="-" onclick="dis('-')"></td> 
+	    </tr> 
+	    <tr> 
+	        <td><input type="button" value="0" onclick="dis('0')"></td> 
+	        <td><input type="button" value="." onclick="dis('.')"></td> 
+	        <td><input type="button" value="=" onclick="solve()"></td> 
+	        <td><input type="button" value="+" onclick="dis('+')"></td> 
+	    </tr> 
+	</table> 
+
+</body>
+</html>
